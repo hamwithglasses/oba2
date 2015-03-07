@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+
+
+	<head> 
+		<title>OBA 2.0 | </title> 
+		
+		<!-- Meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<meta name="description" content="OBA2.0, a improved real-time data application for CSE 440 - Introduction to HCI." /> 
+
+		
+		<!-- Icons -->		
+		<link rel="shortcut icon" href="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/main/fav.png" />
+ 
+ 		<!-- CSS -->
+		<link href="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/interactive.css" type="text/css" rel="stylesheet" />
+		<link href="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/main.css" type="text/css" rel="stylesheet" /> 
+		
+		<!-- Javascript -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js" type="text/javascript"></script> 
+		<script src="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/interactive.js" type="text/javascript"></script>
+		
+	</head> 
+ 
+	<body>
+	<div id="white_bg">
+	
+	<div id="top_navi">
+		<a href="index.html"><span id="logo"></span></a>
+		<div id="right_nav">
+			<ul>
+
+						
+				<li><a href="index.html">Overview</a></li>
+				<li class="sel"><a href="prototype.html">Prototype</a></li>
+				<li><a href="documentation.html">Documentation</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<img src="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/main/line.png" alt="line"/>
+	
+	
+	<div id="main">
+		<div id="sidebar">
+			<div id="mini_nav">
+				<span class="tselect"><img src="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/images/moba.png" alt="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/main"/></span>
+				<span class="task">1</span>
+				<span class="task">2</span>
+				<span class="task">3</span>
+			</div>
+			
+			<div id="sideslide">
+				<div class="entry">
+					<strong>Interactive</strong>
+					<h1>Prototype</h1>
+					
+					<p>Welcome to the Interactive Prototype for the OBA2.0 iOS application. Provided in this prototype are three tasks that users are able to interact with.</p>
+					<p>Tasks are relatively open-ended, so to help guide users throughout tasks, portions of the prototype are unavailable. Additionally, some features are unavailable due to the fact that these restricted features are unchanged from the original OneBusAway application.</p>
+					<p>Select a number above to receive a prompt as well as clear steps to perform each task.</p>
+					<br/>
+					<p><span class="note">*Best viewed in Webkit/Gecko browsers</span></p>
+				</div>
+			
+				<div class="entry">
+					<strong>Favoriting Bus Information</strong>
+					<h1>Task 1</h1>
+					
+					<p>You have used the OneBusAway application before and now want to set up a new ‘Favorite’ for all busses heading southbound on Route 72 that go through a nearby bus stop.</p>
+					
+					<ul>
+						<li>Open up the 'OBA2' application.</li>
+						<li>Select 'Route' on the map's integrated search bar.</li>
+						<li>Enter in 'route 72' into the text input area and press 'Return'.</li>
+						<li>Choose the nearest southbound stop.</li>
+						<li>Select 'Favorite Stop' and save the favorite's name as '72 to Home'.</li>
+						<li>Your filtered search/stop is now favorited for easy access.</li>
+					</ul>
+				</div>
+				
+				<div class="entry">
+					<strong>Getting Around with Directions</strong>
+					<h1>Task 2</h1>
+					<p>A friend calls you up and tells you to come over to the Cheesecake Factory ASAP. Having no idea how to get there, you use OneBusAway2 to find a bus to your destination.</p>
+					
+					<ul>
+						<li>Open up the 'OBA2' application.</li>
+						<li>Select 'Directions' on the map's integrated search bar.</li>
+						<li>Your current location is automatically set, so you simply enter 'cheesecake factory' into Point B and press 'Return'.</li>
+						<li>Finally, select the first bus stop on your route (marked with a 31) to view the earliest bus to begin your trip.</li>
+					</ul>
+				</div>
+				
+				<div class="entry">
+					<strong>Adding &amp; Responding to Alerts</strong>
+					<h1>Task 3</h1>
+					
+					<p>You add an alert for your routine commute on Route 68 Mon, Wed, Fri at 3:30pm to work. Later in the day as 3:30pm draws near, you find yourself running very late. Your alert pops up and you can't make it to the alerted bus. Interact with the alert to find out when the next bus is coming and set an alert for it.</p>
+					
+					<ul>
+						<li>Open up the 'OBA2' application.</li>
+						<li>Select 'Alerts' on the navigation bar and press '+ Add Alert'.</li>
+						<li>Choose 'Stop' and select the closest stop to you.</li>
+						<li>Next, select 'Route &amp; Time' and select 3:30pm.</li>
+						<li>Change other settings for your alert and then press 'Save' when done.</li>
+						<li>Your alert pops up after a while. Select 'Next Bus'.</li>
+						<li>Press 'Set Alert' to set a temporary alert for the next buss and press 'OK' on the final notification.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<div id="phone">
+			<div id="mask">
+			
+				<div id="slider">
+				
+					<!--0 Map Default-->
+					<div id="c0" class="content bg_map">
+						<div id="search">
+							
+							<ul>
+								<li class="stop select"></li>
+								<li class="route"></li>
+								<li class="direct"></li>
+							</ul>
+							
+							<div class="fnone bar"></div>
+						</div>
+					</div>
+					
+					<!--1 Favorites-->
+					<div id="c1" class="content bg_default">
+						<div id="top">
+							<div class="r_button edit fnone"></div>
+							<div class="l_button"></div>
+							<h1>Favorites</h1>
+						</div>
+						
+						<div class="fnone single"><span class="black">To School</span></div>
+						<div class="fnone single"><span class="black">School to Work</span></div>
+						<div id="favroute" class="single hide"><span class="black">72s to Home</span></div>
+					</div>
+					
+					<!--2 Alerts Default-->
+					<div id="c2" class="content bg_default">
+						<div id="top">
+							<div class="r_button edit fnone"></div>
+							<div class="l_button"></div>
+							<h1>Alerts</h1>
+						</div>
+						
+						<div class="add_alert"><span class="black">+ Add Alert</span><span class="blank"></span></div>
+						<div id="alert_break"></div>
+						<div class="fnone single"><span class="black">6:00pm back to Home</span></div>
+						<div class="fnone hide single"><span class="black">68 to Work</span></div>
+					</div>
+					
+					<!--3 Add Alert Default-->
+					<div id="c3" class="content bg_default">
+						<div id="top">
+							<div class="r_button save"></div>
+							<div class="l_button back"></div>
+							<h1>Add Alert</h1>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li id="setname" class="top"><span class="black">Name</span><span class="stext">Default</span></li>
+								<li id="setstop" class="mid"><span class="black">Stop</span><span class="stext">None</span></li>
+								<li id="settime" class="mid"><span class="black">Route &amp; Time</span><span class="stext">None</span></li>
+								<li id="repeat" class="mid"><span class="black">Repeat</span><span class="stext">None</span></li>
+								<li id="alertBefore" class="mid"><span class="black">Alert Me</span><span class="stext">None</span></li>
+								<li id="other" class="bot"><span class="black">Other Settings</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!--4 Alert Name-->
+					<div id="c4" class="content bg_default">
+						<div id="top">
+							<div class="r_button save"></div>
+							<div class="l_button cancel"></div>
+							<h1>Add Alert</h1>
+						</div>
+						
+						<div class="single"><span class="black">68 to Work</span><span class="blank"></span></div>
+					</div>
+					
+					<!--5 Repeat-->
+					<div id="c5" class="content bg_default">
+						<div id="top">
+							<div class="r_button save"></div>
+							<div class="l_button cancel"></div>
+							<h1>Repeat</h1>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="black">All</span><span class="blank"></span></li>
+								<li class="fnone bot"><span class="black">None</span><span class="blank"></span></li>
+							</ul>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="top"><span class="black">Monday</span><span class="check"></span></li>
+								<li class="fnone mid"><span class="black">Tuesday</span><span class="blank"></span></li>
+								<li class="mid"><span class="black">Wednesday</span><span class="check"></span></li>
+								<li class="fnone mid"><span class="black">Thursday</span><span class="blank"></span></li>
+								<li class="mid"><span class="black">Friday</span><span class="check"></span></li>
+								<li class="fnone mid"><span class="black">Saturday</span><span class="blank"></span></li>
+								<li class="fnone bot"><span class="black">Sunday</span><span class="blank"></span></li>
+							</ul>
+						</div>
+						
+						<div class="single"><span class="black">Weather</span><span class="on"></span></div>
+					</div>
+					
+					<!--6 Alert Me (Before)-->
+					<div id="c6" class="content bg_default">
+						<div id="top">
+							<div class="r_button save"></div>
+							<div class="l_button cancel"></div>
+							<h1>Alert Me</h1>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="black">None</span><span class="blank"></span></li>
+								<li class="fnone mid"><span class="black">1 min before</span><span class="blank"></span></li>
+								<li class="fnone mid"><span class="black">5 mins before</span><span class="blank"></span></li>
+								<li class="mid"><span class="black">10 mins before</span><span class="check"></span></li>
+								<li class="fnone mid"><span class="black">30 mins before</span><span class="blank"></span></li>
+								<li class="fnone mid"><span class="black">1 hour before</span><span class="blank"></span></li>
+								<li class="fnone bot"><span class="black">2 hours before</span><span class="blank"></span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!--7 Other Settings-->
+					<div id="c7" class="content bg_default">
+						<div id="top">
+							<div class="r_button save"></div>
+							<div class="l_button cancel"></div>
+							<h1>Other Settings</h1>
+						</div>
+						
+						<div class="fnone single"><span class="black">Delay Limit</span><span class="stext">None</span></div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="black">Ringer</span><span class="off"></span></li>
+								<li class="fnone bot"><span class="black">Ringer Tone</span><span class="stext">None</span></li>
+							</ul>
+						</div>
+						
+						<div class="fnone single"><span class="black">Weather</span><span class="on"></span></div>
+					</div>
+					
+					<!--8 Filtered Stop Information-->
+					<div id="c8" class="content bg_default">
+						<div id="top">
+							<div class="r_button"></div>
+							<div class="l_button back"></div>
+							<h1>Stop #23920</h1>
+						</div>
+						
+						<div class="nothing">
+							<h1>Martin L King Jr Way S & Othello St</h1>
+							<p>SW Bound</p>
+						</div>
+						
+						<div class="fnone single_small"><span class="black text">Filter Routes</span></div>
+						<div id="favorite" class="single_small"><span class="black text">Favorite Stop</span></div>
+						
+						<div class="jdescription"></div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="btime">72</span><em>Downtown - 1:51pm, 2 min delay</em><span class="time red">-2</span></li>
+								<li class="fnone mid"><span class="btime">72</span><em>Downtown - 2:23pm on time</em><span class="time">32</span></li>
+								<li class="fnone bot"><span class="btime">72</span><em>Downtown - 2:56pm 7 min delay</em><span class="time green">33</span></li>
+							</ul>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="black">Show More Times</span></li>
+								<li class="fnone bot"><span class="black">Report a Problem</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					<!--9 Unfiltered Stop Information-->
+					<div id="c9" class="content bg_default">
+						<div id="top">
+							<div class="r_button"></div>
+							<div class="l_button back"></div>
+							<h1>Stop #23920</h1>
+						</div>
+						
+						<div class="nothing">
+							<h1>Martin L King Jr Way S & Othello St</h1>
+							<p>SW Bound</p>
+						</div>
+						
+						<div class="single_small"><span class="black text">Filter Routes</span></div>
+						<div class="single_small"><span class="black text">Favorite Stop</span></div>
+						
+						<div class="jdescription"></div>
+						
+						<div class="join">
+							<ul>
+								<li class="top"><span class="btime">74</span><em>Downtown - 1:49pm on time</em><span class="time">1</span></li>
+								<li class="mid"><span class="btime">72</span><em>Downtown - 1:51pm, 2 min delay</em><span class="time red">-2</span></li>
+								<li class="bot"><span class="btime">31</span><em>Fremont - 2:10pm 5 min delay</em><span class="time green">9</span></li>
+							</ul>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="top"><span class="black">Show More Times</span></li>
+								<li class="bot"><span class="black">Report a Problem</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!--10 Map Search for Route-->
+					<div id="c10" class="content bg_map2">
+						<div id="search">
+							
+							<ul>
+								<li class="fnone stop"></li>
+								<li class="route select"></li>
+								<li class="fnone direct"></li>
+							</ul>
+							
+							<div class="bar_route"></div>
+						</div>
+						
+						<div class="fnone pin1"></div>
+						<div class="pin2"></div>
+					</div>
+					
+					<!--11 Favorite Name-->
+					<div id="c11" class="content bg_default">
+						<div id="top">
+							<div class="r_button save"></div>
+							<div class="l_button back"></div>
+							<h1>Favorite Name</h1>
+						</div>
+						
+						<div class="single"><span class="black">72s to Home</span><span class="blank"></span></div>
+					</div>
+					
+					<!--12 Favorited Filtered Stop-->
+					<div id="c12" class="content bg_default">
+						<div id="top">
+							<div class="r_button"></div>
+							<div class="l_button back"></div>
+							<h1>Stop #23920</h1>
+						</div>
+						
+						<div class="nothing">
+							<h1>Martin L King Jr Way S & Othello St</h1>
+							<p>SW Bound</p>
+						</div>
+						
+						<div class="fnone single_small"><span class="black text">Filter Routes</span></div>
+						<div id="removestop" class="single_small"><span class="black text">Remove Stop</span></div>
+						
+						<div class="jdescription"></div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="btime">72</span><em>Downtown - 1:51pm, 2 min delay</em><span class="time red">-2</span></li>
+								<li class="fnone mid"><span class="btime">72</span><em>Downtown - 2:23pm on time</em><span class="time">32</span></li>
+								<li class="fnone bot"><span class="btime">72</span><em>Downtown - 2:56pm 7 min delay</em><span class="time green">33</span></li>
+							</ul>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="black">Show More Times</span></li>
+								<li class="fnone bot"><span class="black">Report a Problem</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!--13 Map Directions-->
+					<div id="c13" class="content bg_map">
+						<div id="search">
+							
+							<ul>
+								<li class="stop"></li>
+								<li class="route"></li>
+								<li class="direct select"></li>
+							</ul>
+							
+							<div class="bar_a"></div>
+							<div class="bar_b"></div>
+						</div>
+					</div>
+					
+					<!--14 Map Directions After-->
+					<div id="c14" class="content bg_map3">
+						<div id="search">
+							
+							<ul>
+								<li class="stop"></li>
+								<li class="route"></li>
+								<li class="direct select"></li>
+							</ul>
+							
+							<div class="bar_a"></div>
+							<div class="bar_b2"></div>
+						</div>
+						<div class="fnone r68_1"></div>
+						<div class="fnone r68_2"></div>
+						<div class="r31"></div>
+					</div>
+					
+					<!--15 Filtered Stop Information-->
+					<div id="c15" class="content bg_default">
+						<div id="top">
+							<div class="r_button"></div>
+							<div class="l_button back"></div>
+							<h1>Stop #72819</h1>
+						</div>
+						
+						<div class="nothing">
+							<h1>Franklin Drive S & Apollo Ave</h1>
+							<p>NW Bound</p>
+						</div>
+						
+						<div class="fnone single_small"><span class="black text">Filter Routes</span></div>
+						<div class="fnone single_small"><span class="black text">Favorite Stop</span></div>
+						
+						<div class="jdescription"></div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="btime">31</span><em>Downtown - 4:20pm, 6 min delay</em><span class="time red">-6</span></li>
+								<li class="fnone bot"><span class="btime">31</span><em>Downtown - 4:46pm on time</em><span class="time">26</span></li>
+							</ul>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="fnone top"><span class="black">Show More Times</span></li>
+								<li class="fnone bot"><span class="black">Report a Problem</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!--16 Alert Choose Stop-->
+					<div id="c16" class="content bg_map">
+					
+						<div id="top">
+							<div class="r_button"></div>
+							<div class="l_button back"></div>
+							<h1>Select a Stop</h1>
+						</div>
+					
+						<div id="search">
+							
+							<ul>
+								<li class="stop select"></li>
+								<li class="fnone route"></li>
+								<li class="fnone direct"></li>
+							</ul>
+							
+							<div class="fnone bar"></div>
+						</div>
+						
+						<div class="alert_pin"></div>
+					</div>
+					
+					<!--17 Alert Set Time-->
+					<div id="c17" class="content bg_default">
+						<div id="top">
+							<div class="r_button"></div>
+							<div class="l_button back"></div>
+							<h1>Route &amp; Time</h1>
+						</div>
+						
+						<div class="join">
+							<ul>
+								<li class="top"><span class="black">68 to Downtown</span><span class="goup"></span></li>
+								<div id="timetable">
+									<div id="choosetime"></div>
+								</div>
+							</ul>
+						</div>
+						
+					</div>
+					
+					
+					
+					
+					
+				</div>
+				
+			</div>
+			
+			<!--Navigation Bar-->
+			<div id="nav">
+				<ul>
+					<li class="map select"></li>
+					<li class="fav"></li>
+					<li class="alerts"></li>
+					<li class="recent fnone"></li>
+					<li class="settings fnone"></li>
+				</ul>
+			</div>
+			
+			<div id="keyboard"><span class="search"></span></div>
+			
+			<div id="alert_save">
+				<div id="alert_save_button"></div>
+			</div>
+			
+			<div id="home">
+				<div class="oba"></div>
+				<div class="fnone set"></div>
+				<div class="fnone saf"></div>
+				<div class="fnone img"></div>
+			</div>
+			
+			<div id="alert1">
+				<div class="lbtn"></div>
+				<div class="fnone rbtn"></div>
+				<div class="fnone bigbtn"></div>
+			</div>
+			
+			<div id="alert2">
+				<div class="lbtn"></div>
+				<div class="fnone rbtn"></div>
+				<div class="fnone bigbtn"></div>
+			</div>
+			
+			<div id="alert3">
+				<div id="alert3btn"></div>
+			</div>
+			
+		</div>
+		
+		<div id="minimize"></div>
+		
+	</div>
+	
+	<img src="http://www.cs.washington.edu/education/courses/cse440/11au/projects/oba20/main/line.png" alt="line"/>
+	
+	<div id="footer">
+		<p><strong>Writing:</strong> Viswanathan Kumaragurubaran <br/> <strong>User Testing:</strong> Sanjana Prasain <br/> <strong>Program Manager:</strong> Jia Le He <br/> <strong>Design:</strong> Kegham Bedoyan</p>
+		<br/>
+		<p><strong>OBA2.0</strong></p>
+		<p>CSE 440 - Introduction to HCI Project</p>
+	</div>
+	
+	</div>
+	</body> 
+</html>
